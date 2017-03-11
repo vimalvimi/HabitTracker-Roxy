@@ -44,14 +44,14 @@ public class MainActivity extends AppCompatActivity {
 
         mHabitDbHelper = new HabitDbHelper(this);
 
-        SetupSpinner();
+        setupSpinner();
 
         displayDatabaseInfo();
 
         mEnterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EnterNewHabit();
+                enterNewHabit();
                 displayDatabaseInfo();
             }
         });
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void SetupSpinner() {
+    private void setupSpinner() {
 
         ArrayAdapter timeOfTheDaySpinnerAdapter = ArrayAdapter.createFromResource(this, R.array.array_time_options, android.R.layout.simple_spinner_item);
         timeOfTheDaySpinnerAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void EnterNewHabit() {
+    private void enterNewHabit() {
 
         String newHabit = mSearchField.getText().toString().trim();
 
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
         Log.v("MAIN", "NEW ROW ID = " + newRowId);
     }
 
-    private void displayDatabaseInfo() {
+    private Cursor displayDatabaseInfo() {
 
         SQLiteDatabase database = mHabitDbHelper.getReadableDatabase();
 
@@ -161,6 +161,7 @@ public class MainActivity extends AppCompatActivity {
             // resources and makes it invalid.
             cursor.close();
         }
+        return cursor;
     }
 
     public void deleteRows() {

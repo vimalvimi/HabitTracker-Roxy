@@ -2,9 +2,9 @@ package com.vimalroxy.habittracker_roxy.data;
 
 import android.provider.BaseColumns;
 
-public class HabitContract {
+public final class HabitContract {
 
-    public HabitContract() {
+    private HabitContract() {
     }
 
     /* Inner class that defines the table contents of the location table */

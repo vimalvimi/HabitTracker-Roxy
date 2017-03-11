@@ -31,5 +31,6 @@ public class HabitDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+        // this database is only on version 1, so no upgrade is required.
     }
 }
