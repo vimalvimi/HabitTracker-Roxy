@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_time_options">
+        <item>@string/time_morning</item>
+        <item>@string/time_evening</item>
+        <item>@string/time_night</item>
+    </string-array>
+</resources>

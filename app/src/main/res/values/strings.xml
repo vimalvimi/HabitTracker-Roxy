@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Habit Tracker - Roxy</string>
+
+    <string name="time_morning">Morning</string>
+    <string name="time_evening">Evening</string>
+    <string name="time_night">Night</string>
+</resources>
